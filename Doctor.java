@@ -24,12 +24,12 @@ public class Doctor{
 		this.availability = availability;
 	}
 	//displaying info for single doctor
-	public void printDoctor(Doctor d)
+	public void printDoctor(Doctor doctor)
 	{
-		System.out.println("Name : "+d.name);
-		System.out.println("ID : "+d.id);
-		System.out.println("Specialization : "+d.specialization);
-		System.out.println("Availability : "+d.availability +"\n");
+		System.out.println("Name : "+doctor.name);
+		System.out.println("ID : "+doctor.id);
+		System.out.println("Specialization : "+doctor.specialization);
+		System.out.println("Availability : "+doctor.availability +"\n");
 	}
 
 	//Displaying List of Doctors

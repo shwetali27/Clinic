@@ -29,7 +29,7 @@ public class Patient{
 		System.out.println("Name : "+patient.name);
 		System.out.println("ID : "+patient.id);
 		System.out.println("MobileNo : "+patient.mobileNo);
-		System.out.println("age : "+patient.age +"\n");
+		System.out.println("Age : "+patient.age +" years\n");
 	}
 
 	//Display list of patients
@@ -38,7 +38,7 @@ public class Patient{
 			System.out.println("Name : "+info.name);
 			System.out.println("ID : "+info.id);
 			System.out.println("MobileNo : "+info.mobileNo);
-			System.out.println("age : "+info.age +"\n");
+			System.out.println("Age : "+info.age +" years\n");
 		}
 	}
 

@@ -13,6 +13,7 @@ import com.bridgelabz.clinic.JSONDoctorsData;
 import com.bridgelabz.clinic.JSONPatientsData;
 import com.bridgelabz.clinic.Utility;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 public class ClinicManagementProgram{
 	public static void main(String[] args){
@@ -76,11 +77,17 @@ public class ClinicManagementProgram{
 				}
 				case 5:{
 					//taking patient's info and appointment
-					patientId++;
 					System.out.print("Please Enter Patient's Name: ");
 					String name = u.inputString();
 					System.out.print("Please Enter Phone number: ");
 					String number = u.inputString();
+					boolean checkNumber = Pattern.matches("[789]{1}\\d{9}",number);
+					if(!checkNumber){
+						System.out.println("Number is incorrect");
+						break;
+						
+					}
+					patientId++;
 					System.out.print("Please Enter Age: ");
 					int age = u.inputInteger();
 					System.out.print("Please enter Doctors id: ");
