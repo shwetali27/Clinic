@@ -8,7 +8,6 @@
 package com.bridgelabz.clinic;
 import com.bridgelabz.clinic.Doctor;
 import com.bridgelabz.clinic.Patient;
-import com.bridgelabz.clinic.UnOrderedNodeCreation;
 import com.bridgelabz.clinic.ArrangeAppointment;
 import java.util.ArrayList;
 import java.util.Scanner;

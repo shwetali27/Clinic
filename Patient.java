@@ -15,7 +15,7 @@ public class Patient{
 	int id,age;
 		
 	public Patient(){}
-		public Patient(String name,int id,String mobileNo,int age){
+	public Patient(String name,int id,String mobileNo,int age){
 		this.name = name;
 		this.id = id;
 		this.mobileNo = mobileNo;
@@ -23,8 +23,7 @@ public class Patient{
 	}
 	
 	//Display Data for One Patient
-	public void printPatient(Patient patient)
-	{
+	public void printPatient(Patient patient){
 		System.out.println("\nPatient's Details are:");
 		System.out.println("Name : "+patient.name);
 		System.out.println("ID : "+patient.id);
