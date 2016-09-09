@@ -22,9 +22,9 @@ public class ArrangeAppointment{
 	}
 
 	//Arranging the appointments according to doctors availability
-	public void takeAppoinment(Patient patient,int id){
+	public void takeAppoinment(Patient patient){
 		try{
-			this.id = id;
+			this.id = patient.doctId;
 			int num = id-1;
 			int count = 1;
 			if(table[num] == null){

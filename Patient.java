@@ -7,19 +7,20 @@
 
 package com.bridgelabz.clinic;
 import java.util.ArrayList;
-import java.util.Scanner;
+import com.bridgelabz.clinic.Utility;
 
 public class Patient{
-	Scanner sc = new Scanner(System.in);
+	Utility u = new Utility();
 	String name,mobileNo;
-	int id,age;
+	int id,age,doctId;
 		
 	public Patient(){}
-	public Patient(String name,int id,String mobileNo,int age){
+	public Patient(String name,int id,String mobileNo,int age,int doctId){
 		this.name = name;
 		this.id = id;
 		this.mobileNo = mobileNo;
 		this.age = age;
+		this.doctId = doctId;
 	}
 	
 	//Display Data for One Patient
@@ -44,23 +45,23 @@ public class Patient{
 	//search method for perticular data.
 	public void searchPatient(ArrayList<Patient> patients){
 		System.out.println("1.Name\n2.ID\n3.Mobile Number");
-		int choice = sc.nextInt();
+		int choice = u.inputInteger();
 		switch(choice){
 			case 1:{
 				System.out.print("Please enter Name to Search: ");
-				String nameSearch = sc.next();
+				String nameSearch = u.inputString();
 				this.searchByName(patients,nameSearch);
 				break;
 			}
 			case 2:{
 				System.out.print("Please Enter ID: ");
-				int idSearch = sc.nextInt();
+				int idSearch = u.inputInteger();
 				this.searchById(patients,idSearch);
 				break;
 			}
 			case 3:{
 				System.out.print("Please Enter Mobile Number for search: ");
-				String spSearch = sc.next();
+				String spSearch = u.inputString();
 				this.searchByNumber(patients,spSearch);
 				break;
 			}

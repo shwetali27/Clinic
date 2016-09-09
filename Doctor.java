@@ -8,10 +8,10 @@
 package com.bridgelabz.clinic;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
+import com.bridgelabz.clinic.Utility;
 
 public class Doctor{
-	Scanner sc = new Scanner(System.in);
+	Utility u = new Utility();
 	String name,specialization,availability;
 	int id;
 	public Doctor(){}//default Constructor
@@ -48,29 +48,29 @@ public class Doctor{
 	//search method for Doctor
 	public void searchDoctor(ArrayList<Doctor> doctors){
 		System.out.println("1.Name\n2.ID\n3.Specilization\n4.Availability");
-		int choice = sc.nextInt();
+		int choice = u.inputInteger();
 		switch(choice){
 			case 1:{
 				System.out.print("Please enter Name to Search: ");
-				String nameSearch = sc.next();
+				String nameSearch = u.inputString();
 				this.searchByName(doctors,nameSearch);
 				break;
 			}
 			case 2:{
 				System.out.print("Please Enter ID: ");
-				int idSearch = sc.nextInt();
+				int idSearch = u.inputInteger();
 				this.searchById(doctors,idSearch);
 				break;
 			}
 			case 3:{
 				System.out.print("Please Enter Specilization for search: ");
-				String spSearch = sc.next();
+				String spSearch = u.inputString();
 				this.searchBySpecilization(doctors,spSearch);
 				break;
 			}
 			case 4:{
 				System.out.print("Please Enter Morning or Evening: ");
-				String available = sc.next();
+				String available =u.inputString();
 				this.searchByAvailability(doctors,available);
 				break;
 			}
